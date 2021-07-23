@@ -33,4 +33,9 @@ class CatatanMakansiangModel extends Model
     {
         return $this->delete($id);
     }
+
+    public function getTotalKkalSiang()
+    {
+        return $this->db->query("SELECT SUM(kalori) AS 'total_kalori' FROM $this->table")->getRow();
+    }
 }

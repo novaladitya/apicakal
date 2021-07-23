@@ -33,4 +33,9 @@ class CatatanCemilanModel extends Model
     {
         return $this->delete($id);
     }
+
+    public function getTotalKkalCemilan()
+    {
+        return $this->db->query("SELECT SUM(kalori) AS 'total_kalori' FROM $this->table")->getRow();
+    }
 }

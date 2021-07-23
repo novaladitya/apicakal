@@ -33,4 +33,9 @@ class CatatanMakanmalamModel extends Model
     {
         return $this->delete($id);
     }
+
+    public function getTotalKkalMalam()
+    {
+        return $this->db->query("SELECT SUM(kalori) AS 'total_kalori' FROM $this->table")->getRow();
+    }
 }
