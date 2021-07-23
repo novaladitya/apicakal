@@ -66,4 +66,9 @@ class CatatanSarapan extends ResourceController
     {
         return $this->model->deleteSarapan($id);
     }
+
+    public function getTotalKkalSarapan()
+    {
+        return $this->respond($this->model->getTotalKkalSarapan(), 200);
+    }
 }

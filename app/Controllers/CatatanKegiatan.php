@@ -66,4 +66,9 @@ class CatatanKegiatan extends ResourceController
     {
         return $this->model->deleteCatKegiatan($id);
     }
+
+    public function getTotalKkalKegiatan()
+    {
+        return $this->respond($this->model->getTotalKkalKegiatan(), 200);
+    }
 }

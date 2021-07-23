@@ -67,4 +67,9 @@ class CatatanMakansiang extends ResourceController
     {
         return $this->model->deleteMakansiang($id);
     }
+
+    public function getTotalKkalSiang()
+    {
+        return $this->respond($this->model->getTotalKkalSiang(), 200);
+    }
 }

@@ -66,4 +66,9 @@ class CatatanCemilan extends ResourceController
     {
         return $this->model->deleteCemilan($id);
     }
+
+    public function getTotalKkalCemilan()
+    {
+        return $this->respond($this->model->getTotalKkalCemilan(), 200);
+    }
 }

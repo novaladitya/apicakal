@@ -66,4 +66,9 @@ class CatatanMakanmalam extends ResourceController
     {
         return $this->model->deleteMakanmalam($id);
     }
+
+    public function getTotalKkalMalam()
+    {
+        return $this->respond($this->model->getTotalKkalMalam(), 200);
+    }
 }
